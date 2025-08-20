@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: leetcode-discord-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
