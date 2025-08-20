@@ -149,6 +149,17 @@ async def list_problems(ctx):
         msg += "📝 No problems in progress.\n"
 
     await ctx.send(msg)
+    # At the end of bot.py
+    import threading
+    from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+def run_server():
+    server = HTTPServer(("0.0.0.0", 8080), SimpleHTTPRequestHandler)
+    print("⚡ Web server running on port 8080")
+    server.serve_forever()
+
+threading.Thread(target=run_server).start()
+
 
 # Run the bot
 bot.run(DISCORD_TOKEN)
