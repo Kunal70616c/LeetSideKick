@@ -4,6 +4,8 @@ import pandas as pd
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+import threading
+from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 # Load environment variables
 load_dotenv(".env")
@@ -150,8 +152,7 @@ async def list_problems(ctx):
 
     await ctx.send(msg)
     # At the end of bot.py
-    import threading
-    from http.server import HTTPServer, SimpleHTTPRequestHandler
+
 
 def run_server():
     server = HTTPServer(("0.0.0.0", 8080), SimpleHTTPRequestHandler)
