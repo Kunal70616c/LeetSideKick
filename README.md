@@ -42,5 +42,5 @@ Users can mark problems as solved or in-progress, view stats 📊, and get notif
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/<your-username>/leetcode-discord-bot.git
+https://github.com/Kunal70616c/LeetSideKick.git
 cd leetcode-discord-bot
